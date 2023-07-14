@@ -24,13 +24,13 @@ app.config['UPLOAD_FOLDER'] = "static"
 path_data_support=os.path.join(app.config['UPLOAD_FOLDER'] ,'data_support')
 path_data_test=os.path.join(app.config['UPLOAD_FOLDER'] ,'data_test')
 
-model_path = "./model/model_fsl.pth"
+model_path = "./model/25w5s_SGD_FSL_FNL_6_7.pth"
 
 convolutional_network = resnet18(pretrained=True)
 convolutional_network.fc = nn.Flatten()
 model = PrototypicalNetworks(convolutional_network).cuda()
 
-# Tải mô hình từ file .pth
+# Load mô hình từ file .pth
 model = torch.load(model_path)
 model.eval()
 
@@ -164,6 +164,7 @@ def get_predict():
     ).detach()
 
     _, example_predicted_labels = torch.max(example_scores.data, 1)
+
     result=[]
     for i in example_predicted_labels:
         result.append(lst_unique_lable[i])
@@ -247,5 +248,13 @@ def count_images_in_folder(folder_path):
 
     return image_count
 
+def load_model(model):
+    model = torch.load(model_path)
+    model.eval()
+    return model
+
+init=get_predict()
+
 if __name__ == '__main__':
     app.run(debug=True)
+    
