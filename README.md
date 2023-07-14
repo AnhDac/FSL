@@ -22,4 +22,4 @@
 ### 3. Chạy app, đảm bảo bạn đang ở môi trường python vừa cài đặt của mình:
 	`py .\web_app.py`
 
-File **_[Few-shot-Learning_Model.ipynb](https://colab.research.google.com/drive/1dAJzDR_20DElQiE-IJNwS_iGrZbRu_4r?usp=sharing)_** sẽ khởi tạo mô hình, sau đó đào tạo trên tập _Omniglot_ và lưu lại mô hình sau khi đào tạo vào drive. Chúng ta nên chạy file này ở trên nền tảng **_Colab_**. Sau khi lưu xong việc của chúng ta là sử dụng nó cho việc phân loại các kí tự viết tay.
+File **_[Few-shot-Learning_Model.ipynb](https://colab.research.google.com/drive/14nOQcWWx_Wo_uFD9RkMO7pl7NBc2Bx7y?usp=sharing)_** sẽ khởi tạo mô hình, sau đó đào tạo trên tập _Omniglot_ và lưu lại mô hình sau khi đào tạo vào drive. Chúng ta nên chạy file này ở trên nền tảng **_Colab_**. Sau khi lưu xong việc của chúng ta là sử dụng nó cho việc phân loại các kí tự viết tay.
